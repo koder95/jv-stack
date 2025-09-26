@@ -30,8 +30,8 @@ public class MateStack<T> {
     }
 
     public T pop() {
+        final T value = peek();
         Node<T> currentTop = top;
-        T value = peek();
         top = top.prev;
         currentTop.prev = null;
         size--;
